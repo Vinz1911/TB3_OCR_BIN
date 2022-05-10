@@ -1,8 +1,15 @@
 # OpenCR Turtlebot 3 ROS2 Core
 
-### OpenCR Firmware for Turtlebot 3 updated for Dynamixel XC430-W150T
+## OpenCR Firmware for Turtlebot 3 updated for Dynamixel XC430-W150T
 
-## Create Firmware:
+### Install required Packages:
+```bash
+$ sudo dpkg --add-architecture armhf
+$ sudo apt update
+$ sudo apt install libc6:armhf
+```
+
+### Create Firmware:
 ```bash
 # make script executable
 pi@raspberry:~$ chmod 755 ./opencr_ld_shell_arm
@@ -12,7 +19,7 @@ pi@raspberry:~$ chmod 755 ./opencr_ld_shell_arm
 pi@raspberry:~$ opencr_ld_shell_x86 make turtlebot3_core.ino.OpenCR.bin burger 1.0.0
 ```
 
-## Flash Firmware:
+### Flash Firmware:
 ```bash
 # make script executable
 pi@raspberry:~$ chmod 755 ./update.sh
